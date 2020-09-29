@@ -30,6 +30,7 @@ git clone https://github.com/allanzelener/yad2k.git
 cd yad2k
 
 # [Option 1] To replicate the conda environment:
+conda env create -f YAD2K_macOS.yml
 conda env create -f environment.yml
 source activate yad2k
 # [Option 2] Install everything globaly.
@@ -47,7 +48,7 @@ pip install keras # Possibly older release: conda install keras
 ```bash
 wget http://pjreddie.com/media/files/yolo.weights
 wget https://raw.githubusercontent.com/pjreddie/darknet/master/cfg/yolov2.cfg
-./yad2k.py yolo.cfg yolo.weights model_data/yolo.h5
+./yad2k.py yolov2.cfg yolo.weights model_data/yolo.h5
 ./test_yolo.py model_data/yolo.h5  # output in images/out/
 ```
 
